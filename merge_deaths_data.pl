@@ -72,7 +72,7 @@ sub load_eurostats_file {
         next if $geo_entity eq 'San Marino';
         next if $geo_entity eq 'United Kingdom';
         next if $geo_entity eq 'Serbia';
-        next if $geo_entity eq 'Romania';
+        # next if $geo_entity eq 'Romania';
         next if $geo_entity eq 'Albania';
         next if $geo_entity eq 'Azerbaijan';
         next if $geo_entity eq 'Belarus';
@@ -137,7 +137,7 @@ sub print_2011_2023_data {
             next if $year == '2024';
             for my $age_group_5 (sort keys %{$data{$country}->{$year}}) {
                 my $deaths = $data{$country}{$year}{$age_group_5}{deaths} // die "{$country}{$year}{$age_group_5}";
-                my $population = $data{$country}{$year}{$age_group_5}{population} // die;
+                my $population = $data{$country}{$year}{$age_group_5}{population} // die "{$country}{$year}{$age_group_5}";
                 say $out "$country,$year,$age_group_5,$deaths,$population";
                 $stats{'2011-2023'}->{'country'}->{$country}++;
                 $stats{'2011-2023'}->{'age_group_5'}->{$age_group_5}++;

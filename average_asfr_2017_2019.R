@@ -87,7 +87,7 @@ dev_tbl_col <- dev_tbl_num %>%
 tbl_html <- dev_tbl_col %>%
   kbl(format = "html", escape = FALSE,
       caption = "Percent deviation of ASFR from the 2017-2019 average baseline  
-                 (blue = deficit / red = excess)") %>%
+                 (blue = excess / red = deficit)") %>%
   kable_styling(full_width = FALSE, position = "center") %>%
   row_spec(0, bold = TRUE)
 

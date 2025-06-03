@@ -82,7 +82,6 @@ sub load_eurostats_births_file {
         next if $geo_entity eq 'San Marino';
         next if $geo_entity eq 'United Kingdom';
         next if $geo_entity eq 'Serbia';
-        next if $geo_entity eq 'Romania';
         next if $geo_entity eq 'Albania';
         next if $geo_entity eq 'Azerbaijan';
         next if $geo_entity eq 'Belarus';
@@ -157,7 +156,6 @@ sub load_eurostats_population_file {
         next if $geo_entity eq 'United Kingdom';
         next if $geo_entity eq 'Serbia';
         next if $geo_entity eq 'Germany';
-        next if $geo_entity eq 'Romania';
         next if $geo_entity eq 'Albania';
         next if $geo_entity eq 'Azerbaijan';
         next if $geo_entity eq 'Belarus';
